@@ -45,8 +45,8 @@ jobs:
      steps:
      - uses: actions/checkout@v3
      - name: Login to registry
-       run: echo ${{ secrets.PERSONNAL_TOKENS }} | docker login ghcr.io -u Saodus --password-stdin
+       run: echo ${{ secrets.PERSONNAL_TOKENS }} | docker login ghcr.io -u saodus --password-stdin
      - name: Build the Docker image
-       run: docker build . --file Dockerfile --tag ghcr.io/Saodus/tp2:latest
+       run: docker build . --file Dockerfile --tag ghcr.io/saodus/tp2:latest
      - name: Push the image into the registry
-       run: docker push ghcr.io/Saodus/tp2:latest
+       run: docker push ghcr.io/saodus/tp2:latest
