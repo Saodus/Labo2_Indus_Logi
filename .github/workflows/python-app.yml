@@ -45,7 +45,7 @@ jobs:
      steps:
      - uses: actions/checkout@v3
      - name: Login to registry
-       run: echo ${{ secrets.PERSONAL_TOKENS }} | docker \
+       run: echo ${{ secrets.PERSONNAL_TOKENS }} | docker \
         login ghcr.io -u Saodus --password-stdin
      - name: Build the Docker image
        run: docker build . --file Dockerfile --tag \ 
